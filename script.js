@@ -24,12 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+            const botao = document.getElementById("botao-cor");
 
+        botao.addEventListener("click", function() {
+        document.body.classList.toggle("cor-ativa");
 
+        // Opcional: mudar o texto do botão
+        if (document.body.classList.contains("cor-ativa")) {
+            botao.textContent = "Remover Cor de Fundo";
+        } else {
+            botao.textContent = "Mudar Cor de Fundo";
+        }
+        });
 
-
-
-    
 
     // 2. CARREGANDO DADOS DO LOCALSTORAGE
     // ------------------------------------
